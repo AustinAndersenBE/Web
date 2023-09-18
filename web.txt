@@ -1,0 +1,35 @@
+1. HTTP stands for HyperText Transfer Protocol. It sets rules for transferring files on the web. It states how the clients and servers should respond
+to certain commands.
+
+2. URL stands for Uniform Resource Locator and it is an address for something like a web page.
+
+3. DNS stands for Domain Name System. It converts the human readable - URL into IP addresses so that computers can identify each other. 
+
+4. A query string is the part of the URL where you pass key-value pairs into the URL. like ?name=Spring&year=2023
+
+5. GET- gets data from the server (it does not change anything)
+POST - sends data to the server (this changes data on the server)
+
+6. An HTTP request is when a client such as a browser sends a message to a web server to do an action following the HTTP protocol
+
+7. An HTTP response would then be a response from the web server to the browser that follows the HTTP protocol
+
+8. HTTP header is a key-value pair that is in a HTTP request or response that gives more information about the request or responce.
+Examples of request headers could be User-Agent, Accept, Host, Authorization
+Examples of response headers could be Content-Type, Cache-Control, Set-Cookie,Location
+
+9. DNS Lookup happens and the browser resolves the name into an IP address
+The browser then establishes a connection to the IP address and then sends various metadata in the form of headers such as type of browser, or any stored cookies ,etc
+The server will then reply to the browser's request by providing the HTML content. Status code 200 means it was successful.
+The browser then creates the DOM from the HTML and it identifies additional elements like images, CSS, JavaScript, etc
+Then for each of the additional resources, the browser issues separate HTTP requests and incorporates the responses (images, css, files) into the final webpage.
+
+
+
+curl -H "Accept: application/json" "https://icanhazdadjoke.com/search?term=pirate"
+
+{"current_page":1,"limit":20,"next_page":1,"previous_page":1,"results":[{"id":"QuscibaMClb","joke":"What does a pirate pay for his corn? A buccaneer!"},{"id":"2gii3LeN7Ed","joke":"Why couldn't the kid see the pirate movie? Because it was rated arrr!"},{"id":"SvzIBAQS0Dd","joke":"What did the pirate say on his 80th birthday? Aye Matey!"},{"id":"exXSCtkOKe","joke":"Why do pirates not know the alphabet? They always get stuck at \"C\"."},{"id":"SnOf2gqjiqc","joke":"Why are pirates called pirates? Because they arrr!"}],"search_term":"pirate","status":200,"total_jokes":5,"total_pages":1}
+
+icanhazdadjoke.com.     0       IN      A       104.21.66.15
+icanhazdadjoke.com.     0       IN      A       172.67.198.173
+
