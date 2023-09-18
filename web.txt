@@ -37,4 +37,22 @@ I then, used the hosted the simple movies app webpage using python3 -m http.serv
 First, I went to the directory to where my files are stored. Then I ran python3 -m http.server and it says Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 Then I went to http://localhost:8000 and I saw my webpage displayed there. Then I Ctrl+C to stop the server on the terminal.
 
+After hosting it again with the get method, it says http://localhost:8000/SimpleForm.html?mood=good
+
+Response Headers:
+
+Date:
+Mon, 18 Sep 2023 06:05:07 GMT
+Server:
+SimpleHTTP/0.6 Python/3.11.5
+
+Request Headers:
+Accept:
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding:
+gzip, deflate, br
+Accept-Language:
+en-US,en;q=0.9
+
+After changing it the POST, it did not work. I got Error code 501 because python's built in http server doesn't support POST. But if I POST did work then the name won't appear as the query parameter in the URL
 
